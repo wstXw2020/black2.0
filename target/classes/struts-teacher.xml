@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+  	<package name="teacher" extends="struts-default">
+  	  <action name="*_*" class="com.woniu.action.{1}Action" method="{2}">
+  	     <result name="kqList" >/stuKQ.jsp</result>
+  	      <result name="kaList" >/stuExam.jsp</result>
+  	   
+  	   
+  	     
+  	  </action>
+
+  	
+  	</package>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<package name="demo" extends="struts-default" >
+		
+		<action name="findAll" class="com.woniu.action.DeptAction" method="findAll" >
+		   <result>index2.jsp</result>
+		</action>
+		
+		
+		
+		<action name="save" class="com.woniu.action.DeptAction" method="save">
+			
+		<!-- 	 <result>/index.jsp</result> -->
+			 <result  type="redirect">findAll.action</result> 
+		</action>
+	</package>
+</struts>
